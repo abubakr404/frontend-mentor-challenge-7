@@ -1,0 +1,91 @@
+:root {
+    --Bright-orange: #fff;
+    --Dark-gray: hsl(0, 0%, 59%);
+    --main-BG: hsl(185, 75%, 39%);
+    --main-CR: hsl(229, 23%, 23%);
+    --p-CR: hsl(227, 10%, 46%);
+    --card-width: 300px;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--main-CR);
+    margin: 0px;
+    background-color: var(--main-BG);
+    background-image: url(images/bg-pattern-top.svg),url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top -570px left -770px, bottom -637px right -715px;
+    position: relative;
+    height: 100vh;
+}
+p {
+    margin: 0 0 24px;
+    color: var(--p-CR);
+}
+h2,h3 {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: var(--Bright-orange);
+    width: var(--card-width);
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+}
+.card img:first-of-type {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.card img:nth-of-type(2) {
+    position: absolute;
+    right: calc(var(--card-width)/2);
+    top: 120px;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 0 0px 5px #fff;
+}
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+}
+.detail {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom: 1px solid #eee;
+}
+.stat-container p {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+.detail h2 span {
+    color: var(--p-CR);
+    font-weight: normal;
+}
+@media (min-width: 1040px) {
+    :root {
+        --card-width: 335px;
+    }
+    body {
+        background-position: top -355px left -300px, bottom -560px right -175px;
+    }
+    .card img:nth-of-type(2) {
+        top: 134px;
+    }
+}
